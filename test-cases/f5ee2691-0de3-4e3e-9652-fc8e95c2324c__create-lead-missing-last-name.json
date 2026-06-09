@@ -1,0 +1,67 @@
+{
+  "id": "create-lead-missing-last-name",
+  "testPlanId": "f5ee2691-0de3-4e3e-9652-fc8e95c2324c",
+  "requirementId": "2e1823b1-ac4c-4d14-b4e1-7cae6b2033df",
+  "suiteName": "Create Lead - E2E",
+  "case": {
+    "id": "create-lead-missing-last-name",
+    "title": "Attempt to create Lead with missing Last Name and verify validation error",
+    "priority": "P0",
+    "platforms": [
+      "chrome"
+    ],
+    "preconditions": [],
+    "steps": [
+      {
+        "id": "step-1",
+        "action": "openUrl",
+        "targetDescription": "Navigate to Leads tab",
+        "value": "https://orgfarm-cdb7bbd1fc-dev-ed.develop.my.salesforce.com/lightning/o/Lead/list"
+      },
+      {
+        "id": "step-2",
+        "action": "tap",
+        "targetDescription": "Click on 'New' button",
+        "locatorHint": "button[title='New']"
+      },
+      {
+        "id": "step-3",
+        "action": "fill",
+        "targetDescription": "Enter First Name",
+        "locatorHint": "input[name='FirstName']",
+        "value": "John"
+      },
+      {
+        "id": "step-4",
+        "action": "fill",
+        "targetDescription": "Enter Company",
+        "locatorHint": "input[name='Company']",
+        "value": "ABC Technologies"
+      },
+      {
+        "id": "step-5",
+        "action": "tap",
+        "targetDescription": "Click on 'Save' button",
+        "locatorHint": "button[title='Save']"
+      },
+      {
+        "id": "step-6",
+        "action": "assertVisible",
+        "targetDescription": "Verify validation error for Last Name",
+        "locatorHint": "div[role='alert']"
+      },
+      {
+        "id": "step-7",
+        "action": "assertContainsText",
+        "targetDescription": "Check error message mentions Last Name",
+        "locatorHint": "div[role='alert']",
+        "assertion": "Last Name"
+      }
+    ],
+    "tags": [
+      "@e2e",
+      "@regression",
+      "lead"
+    ]
+  }
+}

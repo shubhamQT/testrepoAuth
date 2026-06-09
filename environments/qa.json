@@ -1,7 +1,7 @@
 {
-  "baseURL": "https://example.com",
-  "username": "admin@example.com",
-  "password": "changeme",
+  "baseURL": "https://orgfarm-cdb7bbd1fc-dev-ed.develop.my.salesforce.com",
+  "username": "shubham.bhele@qtsolv.com",
+  "password": "Admin@1234",
   "browser": "chromium",
   "headless": true,
   "timeout": 30000,

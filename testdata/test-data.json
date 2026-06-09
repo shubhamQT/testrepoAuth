@@ -1,1 +1,8 @@
-{}
+{
+  "lead": {
+    "firstName": "John",
+    "lastName": "Smith",
+    "company": "ABC Technologies",
+    "status": "Open - Not Contacted"
+  }
+}
